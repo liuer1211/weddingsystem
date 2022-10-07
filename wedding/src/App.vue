@@ -16,6 +16,6 @@ export default {
     margin: 0;
   }
   #app{
-    font-size: 18/100rem;
+    font-size: 16/100rem;
   }
 </style>

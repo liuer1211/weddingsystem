@@ -27,5 +27,25 @@
 
 # less
   npm i less@3 less-loader@5
+  使用计算
+
+# vant
+  npm i vant@2
+  npm i babel-plugin-import -D
+  按需加载 
+  babel.config.js引入
+  plugins: [
+    ['import', {
+      libraryName: 'vant',
+      libraryDirectory: 'es',
+      style: true
+    }, 'vant']
+  ]
+  main.js引入
+  import { Button } from 'vant';
+  Vue.use(Button);
+
+# swiper
+  npm i swiper@7
 
 

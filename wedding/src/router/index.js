@@ -10,6 +10,11 @@ const routes = [
     component: () => import('../pages/home')
   },
   {
+    name: 'signin',
+    path: '/signin',
+    component: () => import('../pages/signin')
+  },
+  {
     path: '/',
     redirect: '/home'
   }
