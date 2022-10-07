@@ -218,25 +218,25 @@ export default {
 
 <style lang="less" scoped>
 	.home-main{
-		font-size: 16px;
+		font-size: 16/100rem;
 		.tab{
 			width: 100%;
-			padding: 12px 12px 0;
+			padding: 12/100rem 12/100rem 0;
 			box-sizing: border-box;
 			display: flex;
 			flex-wrap: wrap;
 			align-items: center;
-			border-bottom: 1px solid #d9d8d8;
+			border-bottom: 1/100rem solid #d9d8d8;
 			>div{
 				cursor: pointer;
-				border-radius: 4px;
-				border: 1px solid #d9d8d8;
-				padding: 6px 12px;
+				border-radius: 4/100rem;
+				border: 1/100rem solid #d9d8d8;
+				padding: 6/100rem 12/100rem;
 				box-sizing: border-box;
-				margin-right: 12px;
-				margin-bottom: 12px;
+				margin-right: 12/100rem;
+				margin-bottom: 12/100rem;
 				&.active{
-					border: 1px solid #1876d7;
+					border: 1/100rem solid #1876d7;
 					color: #1876d7;
 				}
 			}
@@ -244,7 +244,7 @@ export default {
 		.people{
 			box-sizing: border-box;
 			>div{
-				padding: 0 12px 12px;
+				padding: 0 12/100rem 12/100rem;
 				box-sizing: border-box;
 				display: flex;
 				position: relative;
@@ -252,24 +252,24 @@ export default {
 					content: '';
 					color: #f1ecec;
 					position: absolute;
-					left: 12px;
-					right: 12px;
+					left: 12/100rem;
+					right: 12/100rem;
 					bottom: 0;
 					// width: 100%;
-					height: 1px;
+					height: 1/100rem;
 					background-color: #f1ecec;
 				}
 				>div{
 					&:first-child{
-						margin-top: 12px;
-						padding-right: 12px;
+						margin-top: 12/100rem;
+						padding-right: 12/100rem;
 						box-sizing: border-box;
-						border-right: 1px solid #f1ecec;
-						min-width: 50px;
-					  width: 50px;
+						border-right: 1/100rem solid #f1ecec;
+						min-width: 50/100rem;
+					  width: 50/100rem;
 					}
 					&:last-child{
-						padding-left: 12px;
+						padding-left: 12/100rem;
 						box-sizing: border-box;
 						flex: 1;
 						display: flex;
@@ -277,15 +277,15 @@ export default {
 					}
 					>div{
 						cursor: pointer;
-						margin-top: 12px;
-						margin-right: 12px;
-						border: 1px solid #d9d8d8;
-						padding: 6px 12px;
+						margin-top: 12/100rem;
+						margin-right: 12/100rem;
+						border: 1/100rem solid #d9d8d8;
+						padding: 6/100rem 12/100rem;
 						box-sizing: border-box;
-						border-radius: 4px;
+						border-radius: 4/100rem;
 						position: relative;
 						&.active{
-							border: 1px solid #1876d7;
+							border: 1/100rem solid #1876d7;
 							color: #1876d7;
 						}
 						i{
@@ -296,18 +296,18 @@ export default {
 						>div{
 							text-align: center;
 							&:nth-child(2){
-								font-size: 12px;
+								font-size: 12/100rem;
 							}
 						}
 					}
 				}
 			}
 			.bot{
-				padding-top: 12px;
+				padding-top: 12/100rem;
 				box-sizing: border-box;
 				flex-direction: column;
 				span{
-					padding-bottom: 12px;
+					padding-bottom: 12/100rem;
 					box-sizing: border-box;
 				}
 				&::after{
@@ -316,38 +316,38 @@ export default {
 			}
 		}
 		.num{
-			padding: 12px;
+			padding: 12/100rem;
 			box-sizing: border-box;
 			>div{
-				padding-bottom: 12px;
+				padding-bottom: 12/100rem;
 				box-sizing: border-box;
 			}
 			.peo{
-				border-top: 1px solid #eee;
-				padding-top: 12px;
+				border-top: 1/100rem solid #eee;
+				padding-top: 12/100rem;
 				padding-bottom: 0;
 				box-sizing: border-box;
 				.tit{
-					padding-bottom: 12px;
+					padding-bottom: 12/100rem;
 					box-sizing: border-box;
 					font-weight: 600;
 				}
 				.model{
 					background-color: #eee;
-					border-radius: 4px;
+					border-radius: 4/100rem;
 					&:not(:last-child){
-						margin-bottom: 12px;
+						margin-bottom: 12/100rem;
 					}
 					>div{
 						&:first-child{
-							padding: 8px;
+							padding: 8/100rem;
 							box-sizing: border-box;
 						}
 						>div{
-							padding: 0 12px 12px;
+							padding: 0 12/100rem 12/100rem;
 							box-sizing: border-box;
 							span{
-								padding-right: 12px;
+								padding-right: 12/100rem;
 								box-sizing: border-box;
 							}
 						}
