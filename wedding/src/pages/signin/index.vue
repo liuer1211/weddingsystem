@@ -236,8 +236,8 @@ export default {
 				margin-right: 12/100rem;
 				margin-bottom: 12/100rem;
 				&.active{
-					border: 1/100rem solid #1876d7;
-					color: #1876d7;
+					border: 1/100rem solid #F27306;
+					color: #F27306;
 				}
 			}
 		}
@@ -285,8 +285,8 @@ export default {
 						border-radius: 4/100rem;
 						position: relative;
 						&.active{
-							border: 1/100rem solid #1876d7;
-							color: #1876d7;
+							border: 1/100rem solid #F27306;
+							color: #F27306;
 						}
 						i{
 							position: absolute;

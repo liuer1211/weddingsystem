@@ -12,6 +12,7 @@ export default {
 </script>
 
 <style lang="less">
+  @import './assets/css/base.css';
   body{
     margin: 0;
   }
