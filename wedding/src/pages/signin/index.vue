@@ -1,5 +1,12 @@
 <template>
 	<div class="home-main">
+		<!-- 导航栏 -->
+		<van-nav-bar
+			title="签到"
+			left-arrow
+			@click-left="onClickLeft"
+		/>
+		<div class="hei"></div>
 		<!-- tab栏 -->
 		<div class="tab">
 			<div 
@@ -211,6 +218,10 @@ export default {
 		// 点击签到
 		getSelect(index,i){
 			this.lists[index].list[i].select = !this.lists[index].list[i].select
+		},
+		// 返回
+		onClickLeft() {
+			this.$router.back()
 		}
 	}
 }
@@ -226,7 +237,7 @@ export default {
 			display: flex;
 			flex-wrap: wrap;
 			align-items: center;
-			border-bottom: 1/100rem solid #d9d8d8;
+			border-bottom: 1/100rem solid #f6f6f6;
 			>div{
 				cursor: pointer;
 				border-radius: 4/100rem;
@@ -355,5 +366,18 @@ export default {
 				}
 			}
 		}
+	}
+	.hei{
+		height: 50/100rem;
+	}
+	/deep/ .van-nav-bar {
+		position: fixed;
+		width: 100%;
+	}
+	/deep/ .van-nav-bar__content {
+		height: 50/100rem;
+	}
+	/deep/ .van-nav-bar .van-icon {
+    color: #F27306;
 	}
 </style>

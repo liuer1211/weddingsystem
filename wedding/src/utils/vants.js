@@ -6,7 +6,10 @@ import {
   GridItem,
   Tabbar,
   TabbarItem,
-  Icon 
+  Icon,
+  Tab,
+  Tabs,
+  NavBar 
 } from 'vant';
 
 Vue.use(Button);
@@ -16,3 +19,6 @@ Vue.use(GridItem);
 Vue.use(Tabbar);
 Vue.use(TabbarItem);
 Vue.use(Icon);
+Vue.use(Tab);
+Vue.use(Tabs);
+Vue.use(NavBar);
