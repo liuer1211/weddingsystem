@@ -1,2 +1,0 @@
-(window["webpackJsonp"]=window["webpackJsonp"]||[]).push([["chunk-2d22d1db"],{f5b8:function(n,t,e){"use strict";e.r(t);var r=function(){var n=this,t=n._self._c;return t("div",[t("van-button",{attrs:{type:"primary"}},[n._v("主要按钮")])],1)},u=[],a={},s=a,b=e("2877"),c=Object(b["a"])(s,r,u,!1,null,"0b2efb2e",null);t["default"]=c.exports}}]);
-//# sourceMappingURL=chunk-2d22d1db.a1c2a8fb.js.map

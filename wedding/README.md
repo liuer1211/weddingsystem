@@ -49,6 +49,6 @@
   npm i swiper@7
 
 # css
-  postcss base.css  
+  postcss base.css
 
 
