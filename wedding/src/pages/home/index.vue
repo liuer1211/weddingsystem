@@ -4,7 +4,7 @@
     <van-search 
       v-model="searchVal" 
       placeholder="结婚幸福吧"
-      background="#F27306"
+      background="#fedeb5"
     />
     <div class="hei"></div>
     <!-- 轮播图 -->
@@ -35,6 +35,7 @@
         <div class="right">
           <h2>婚庆公司</h2>
           <div class="der">婚庆公司</div>
+          <div class="bot">浏览次数：222</div>
         </div>
       </div>
     </div>
@@ -91,6 +92,9 @@ export default {
           pagination: {
             el: ".swiper-pagination",
           },
+          // slidesPerView: 'auto',
+          // // paginationClickable: true,
+          // spaceBetween: 12
         });
       });
     },
@@ -124,6 +128,22 @@ export default {
     right: 0;
     height: 54/100rem;
     z-index: 111;
+    background-color: initial;
+  }
+  /deep/ .van-search__content {
+    background-color: #fffffff0;
+    border-radius: 16/100rem;
+  }
+  /deep/ .van-grid-item__content {
+    background-color: initial;
+  }
+  /deep/ .van-tabbar{
+    background-color: #ffd6a0;
+    border-top-left-radius: 20/100rem;
+    border-top-right-radius: 20/100rem;
+  }
+  /deep/ .van-tabbar-item--active{
+    background-color: initial;
   }
   .hei{
     height: 54/100rem;
@@ -137,7 +157,7 @@ export default {
     .swiper-wrapper{
       .swiper-slide{
         img{
-          height: 180/100rem;
+          height: 160/100rem;
           width: 100%;
           display: block;
           object-fit: cover;
@@ -160,9 +180,9 @@ export default {
       box-sizing: border-box;
       display: flex;
       .left{
-        width: 120/100rem;
-        min-width: 120/100rem;
-        height: 120/100rem;
+        width: 100/100rem;
+        min-width: 100/100rem;
+        height: 100/100rem;
         img{
           width: 100%;
           height: 100%;
@@ -174,13 +194,28 @@ export default {
       .right{
         flex: 1;
         padding: 0 0 0 12/100rem;
+        position: relative;
         h2{
-          font-size: 20/100rem;
+          font-size: 18/100rem;
+          font-weight: 600;
         }
         .der{
-
+          padding-top: 4/100rem;
+          box-sizing: border-box;
+        }
+        .bot{
+          position: absolute;
+          bottom: 4/100rem;
+          font-size: 12/100rem;
         }
       }
     }
+  }
+  /deep/ .van-grid-item{
+    flex-basis: 25%;
+    padding-top: 20%!important;
+  }
+  /deep/ .van-grid-item__icon+.van-grid-item__text {
+    margin-top: 8/100rem;
   }
 </style>
