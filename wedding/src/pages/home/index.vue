@@ -30,7 +30,7 @@
     <div class="info-list">
       <div class="info-model" v-for="val in 3" :key="val">
         <div class="left">
-          <img>
+          <img :src="getImg('c4.png')">
         </div>
         <div class="right">
           <h2>婚庆公司</h2>
@@ -42,9 +42,10 @@
     <div class="hei i"></div>
     <!-- 底部 -->
     <van-tabbar v-model="active" active-color="#F27306" inactive-color="#000">
-      <van-tabbar-item icon="home-o">首页</van-tabbar-item>
+      <van-tabbar-item icon="home-o" @click="$router.push('/home')">首页</van-tabbar-item>
       <van-tabbar-item icon="friends-o">领证</van-tabbar-item>
-      <van-tabbar-item icon="birthday-cake-o">婚庆</van-tabbar-item>
+      <van-tabbar-item icon="fire-o">最热</van-tabbar-item>
+      <van-tabbar-item icon="birthday-cake-o" @click="$router.push('/wedding')">婚庆</van-tabbar-item>
       <van-tabbar-item icon="contact">我的</van-tabbar-item>
     </van-tabbar>
   </div>
@@ -60,10 +61,10 @@ export default {
       searchVal: '',
       swiperList: [
         {
-          img: '',
+          img: 'sw1.png',
         },
         {
-          img: '',
+          img: 'sw2.png',
         }
       ],
       active: 0,
@@ -101,7 +102,7 @@ export default {
     // 动态拼接图片地址
     getImg(data) {
       if (data) {
-        let img = require(`../../assets/images/${data}`)
+        let img = require(`../../assets/images/home/${data}`)
         return img;
       }
     },
@@ -111,6 +112,9 @@ export default {
       switch(i){
         case 0:
           this.$router.push({path:'/signin'})
+          break;
+        case 1:
+          this.$router.push({path:'/wedding'})
           break;
         default:
           break;
@@ -129,6 +133,10 @@ export default {
     height: 54/100rem;
     z-index: 111;
     background-color: initial;
+    padding: 12/100rem 12/100rem;
+  }
+  /deep/ .van-search .van-cell{
+    padding: 4/100rem 12/100rem 4/100rem 0;
   }
   /deep/ .van-search__content {
     background-color: #fffffff0;

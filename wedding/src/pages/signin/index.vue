@@ -4,19 +4,21 @@
 		<van-nav-bar
 			title="签到"
 			left-arrow
-			@click-left="onClickLeft"
+			@click-left="$router.back()"
 		/>
 		<div class="hei"></div>
 		<!-- tab栏 -->
 		<div class="tab">
-			<div 
-				class="model" 
-				v-for="(item,index) in tabList" 
-				:key="index"
-				@click="tabChange(index,item)"
-				:class="active===index ? 'active':''"
-			>
-				{{item.type}}
+			<div class="tab-model">
+				<div
+					class="model" 
+					v-for="(item,index) in tabList" 
+					:key="index"
+					@click="tabChange(index,item)"
+					:class="active===index ? 'active':''"
+				>
+					{{item.type}}
+				</div>
 			</div>
 		</div>
 		<!-- 人员 -->
@@ -214,15 +216,25 @@ export default {
 				default:
 					break;
 			}
+			this.$nextTick(()=>{
+				this.setCentert();
+			})
+		},
+		setCentert() {
+			let container = document.querySelector('.tab-model')
+			let activeNode = document.querySelector('.model.active')
+			// console.log('---', activeNode.offsetLeft)
+			// console.log('---', document.body.clientWidth)
+			// console.log('---', activeNode.clientWidth)
+			// 元素距离滑块左边距离  -  居中时元素到窗口左边距离  =  滚动条滑动的距离
+			let scrollWidth = activeNode.offsetLeft - (document.body.clientWidth-activeNode.clientWidth)/2
+			container.scrollLeft = scrollWidth;
+			// console.log('---', scrollWidth)
 		},
 		// 点击签到
 		getSelect(index,i){
 			this.lists[index].list[i].select = !this.lists[index].list[i].select
 		},
-		// 返回
-		onClickLeft() {
-			this.$router.back()
-		}
 	}
 }
 </script>
@@ -234,21 +246,41 @@ export default {
 			width: 100%;
 			padding: 12/100rem 12/100rem 0;
 			box-sizing: border-box;
-			display: flex;
-			flex-wrap: wrap;
-			align-items: center;
 			border-bottom: 1/100rem solid #f6f6f6;
+			overflow: hidden;
 			>div{
-				cursor: pointer;
-				border-radius: 4/100rem;
-				border: 1/100rem solid #d9d8d8;
-				padding: 6/100rem 12/100rem;
-				box-sizing: border-box;
-				margin-right: 12/100rem;
-				margin-bottom: 12/100rem;
-				&.active{
-					border: 1/100rem solid #F27306;
-					color: #F27306;
+				overflow: hidden;
+				overflow-x: auto;
+				display: flex;
+				align-items: center;
+				transition: .3s;
+				&::-webkit-scrollbar{
+					display: none;
+				}
+				>div{
+					flex: 0 0 30%;
+					cursor: pointer;
+					border-radius: 4/100rem;
+					border: 1/100rem solid #d9d8d8;
+					padding: 6/100rem 12/100rem;
+					box-sizing: border-box;
+					margin-right: 12/100rem;
+					margin-bottom: 12/100rem;
+					text-align: center;
+					transition: .3s;
+					&.active{
+						border: 1/100rem solid #F27306;
+						color: #F27306;
+					}
+					&:nth-child(1){
+						flex: 0 0 20%;
+					}
+					&:nth-child(2){
+						flex: 0 0 20%;
+					}
+					&:nth-child(5){
+						flex: 0 0 20%;
+					}
 				}
 			}
 		}
@@ -295,6 +327,7 @@ export default {
 						box-sizing: border-box;
 						border-radius: 4/100rem;
 						position: relative;
+						transition: .3s;
 						&.active{
 							border: 1/100rem solid #F27306;
 							color: #F27306;
@@ -344,7 +377,7 @@ export default {
 					font-weight: 600;
 				}
 				.model{
-					background-color: #eee;
+					background-color: #f1e3ca;
 					border-radius: 4/100rem;
 					&:not(:last-child){
 						margin-bottom: 12/100rem;
@@ -373,6 +406,7 @@ export default {
 	/deep/ .van-nav-bar {
 		position: fixed;
 		width: 100%;
+		background-color: #ffd6a0;
 	}
 	/deep/ .van-nav-bar__content {
 		height: 50/100rem;
