@@ -9,7 +9,9 @@ import {
   Icon,
   Tab,
   Tabs,
-  NavBar 
+  NavBar,
+  Collapse,
+  CollapseItem
 } from 'vant';
 
 Vue.use(Button);
@@ -22,3 +24,5 @@ Vue.use(Icon);
 Vue.use(Tab);
 Vue.use(Tabs);
 Vue.use(NavBar);
+Vue.use(Collapse);
+Vue.use(CollapseItem);

@@ -20,6 +20,11 @@ const routes = [
     component: () => import('../pages/wedding')
   },
   {
+    name: 'chat',
+    path: '/chat',
+    component: () => import('../pages/chat')
+  },
+  {
     path: '/',
     redirect: '/home'
   }

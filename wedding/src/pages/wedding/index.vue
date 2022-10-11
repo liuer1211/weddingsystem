@@ -11,27 +11,31 @@
       <div>
         <img :src="getImg('wed1.png')">
         <div class="left">
-          <div>名字</div>
-          <div>介绍</div>
-          <div>几颗星</div>
+          <div>夏日风情</div>
+          <div>鱼水千年合，芝兰百世馨</div>
+          <Start score="4.5"/>
         </div>
-        <div class="right">价格</div>
+        <div class="right">$999</div>
       </div>
     </div>
     <div class="hei i"></div>
     <!-- 底部 -->
     <van-tabbar v-model="active" active-color="#F27306" inactive-color="#000">
-      <van-tabbar-item icon="home-o" @click="$router.push('/home')">首页</van-tabbar-item>
+      <van-tabbar-item icon="home-o" @click="$router.replace('/home')">首页</van-tabbar-item>
       <van-tabbar-item icon="friends-o">领证</van-tabbar-item>
-      <van-tabbar-item icon="fire-o">最热</van-tabbar-item>
-      <van-tabbar-item icon="birthday-cake-o" @click="$router.push('/wedding')">婚庆</van-tabbar-item>
+      <van-tabbar-item icon="fire-o" @click="$router.replace('/chat')">最热</van-tabbar-item>
+      <van-tabbar-item icon="birthday-cake-o" @click="$router.replace('/wedding')">婚庆</van-tabbar-item>
       <van-tabbar-item icon="contact">我的</van-tabbar-item>
     </van-tabbar>
   </div>
 </template>
 
 <script>
+import Start from '../../components/start/start'
 export default{
+  components:{
+    Start
+  },
   data(){
     return{
       active: 3,
@@ -85,6 +89,7 @@ export default{
       position: relative;
       img{
         width: 100%;
+        height: 538/100rem;
         display: block;
         object-fit: cover;
         border-radius: 20/100rem;
@@ -96,6 +101,7 @@ export default{
         bottom: 0;
         left: 0;
         width: 100%;
+        line-height: 30/100rem;
         z-index: 1;
         padding: 12/100rem;
         box-sizing: border-box;
@@ -105,6 +111,11 @@ export default{
         border-top-right-radius: 4/100rem;
         border-bottom-right-radius: 20/100rem;
         border-bottom-left-radius: 20/100rem;
+        >div{
+          &:nth-child(1){
+            font-weight: 600;
+          }
+        }
       }
       .right{
         position: absolute;

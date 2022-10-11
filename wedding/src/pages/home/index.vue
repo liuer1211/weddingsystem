@@ -42,10 +42,10 @@
     <div class="hei i"></div>
     <!-- 底部 -->
     <van-tabbar v-model="active" active-color="#F27306" inactive-color="#000">
-      <van-tabbar-item icon="home-o" @click="$router.push('/home')">首页</van-tabbar-item>
+      <van-tabbar-item icon="home-o" @click="$router.replace('/home')">首页</van-tabbar-item>
       <van-tabbar-item icon="friends-o">领证</van-tabbar-item>
-      <van-tabbar-item icon="fire-o">最热</van-tabbar-item>
-      <van-tabbar-item icon="birthday-cake-o" @click="$router.push('/wedding')">婚庆</van-tabbar-item>
+      <van-tabbar-item icon="fire-o" @click="$router.replace('/chat')">最热</van-tabbar-item>
+      <van-tabbar-item icon="birthday-cake-o" @click="$router.replace('/wedding')">婚庆</van-tabbar-item>
       <van-tabbar-item icon="contact">我的</van-tabbar-item>
     </van-tabbar>
   </div>
