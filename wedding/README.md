@@ -3,6 +3,9 @@
   yarn serve
   yarn build
 
+# 访问
+  
+
 # 适配
   <script type="text/javascript">
     // 适配 控制根像素
@@ -50,5 +53,11 @@
 
 # css
   postcss base.css
+
+# 星星
+
+# tab栏
+
+# 折叠面板
 
 
