@@ -5,4 +5,4 @@
   vue2+vueRouter3+vant2+axios+swiper7
 
 # 访问
-  
+  [点我访问](https://liuer1211.github.io/weddingsystem/dist/)

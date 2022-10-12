@@ -4,7 +4,7 @@
   yarn build
 
 # 访问
-  
+  [点我访问](https://liuer1211.github.io/weddingsystem/wedding/dist/)
 
 # 适配
   <script type="text/javascript">
