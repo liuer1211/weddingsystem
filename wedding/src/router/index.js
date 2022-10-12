@@ -25,6 +25,16 @@ const routes = [
     component: () => import('../pages/chat')
   },
   {
+    name: 'marriage',
+    path: '/marriage',
+    component: () => import('../pages/marriage')
+  },
+  {
+    name: 'user',
+    path: '/user',
+    component: () => import('../pages/user')
+  },
+  {
     path: '/',
     redirect: '/home'
   }

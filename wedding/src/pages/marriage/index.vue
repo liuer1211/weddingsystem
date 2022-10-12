@@ -2,18 +2,18 @@
   <div>
     <!-- 导航栏 -->
 		<van-nav-bar
-			title="婚庆"
+			title="领证"
 			left-arrow
 			@click-left="$router.back()"
 		/>
     <div class="hei"></div>
     <div class="wed-cen">
       <div>
-        <img :src="getImg('wed1.png')">
+        <img :src="getImg('mar1.png')">
         <div class="left">
-          <div>夏日风情</div>
-          <div>鱼水千年合，芝兰百世馨</div>
-          <Start score="4.5"/>
+          <div>婚姻登记所</div>
+          <div>金玉良缘，喜结连理</div>
+          <Start score="5"/>
         </div>
         <div class="map-icon">
           <img src="../../assets/images/icon/mapicon.png"/>
@@ -21,22 +21,7 @@
         <div class="map-icon1">
           <img src="../../assets/images/icon/mapicon1.png"/>
         </div>
-        <div class="right">￥999</div>
-      </div>
-      <div>
-        <img :src="getImg('wed1.png')">
-        <div class="left">
-          <div>夏日风情</div>
-          <div>鱼水千年合，芝兰百世馨</div>
-          <Start score="4.5"/>
-        </div>
-        <div class="map-icon">
-          <img src="../../assets/images/icon/mapicon.png"/>
-        </div>
-        <div class="map-icon1">
-          <img src="../../assets/images/icon/mapicon1.png"/>
-        </div>
-        <div class="right">￥999</div>
+        <div class="right">￥9</div>
       </div>
     </div>
     <div class="hei i"></div>
@@ -59,7 +44,7 @@ export default{
   },
   data(){
     return{
-      active: 3,
+      active: 1,
     }
   },
   methods:{

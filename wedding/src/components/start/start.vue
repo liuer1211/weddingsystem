@@ -12,7 +12,7 @@
 
   export default {
     props: {
-      score: Number,
+      score: String,
       size: Number
     },
     data() {
@@ -29,14 +29,14 @@
         const {score} = this
         const scs = []
         // 向scs中添加n个CLASS_ON
-        const scoreInteger = Math.floor(score)
+        const scoreInteger = Math.floor(Number(score))
         // 有几个整数，就加几个 红星
         for (let i = 0; i < scoreInteger; i++) {
           scs.push(CLASS_ON)
         }
         // 向scs中添加0/1个CLASS_HALF
         // 小数点>0.5 加 半星，否则不加
-        if(score*10-scoreInteger*10>=5) {
+        if(Number(score)*10-scoreInteger*10>=5) {
           scs.push(CLASS_HALF)
         }
         // 向scs中添加n个CLASS_OFF

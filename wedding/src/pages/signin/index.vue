@@ -407,6 +407,7 @@ export default {
 		position: fixed;
 		width: 100%;
 		background-color: #ffd6a0;
+		z-index: 111;
 	}
 	/deep/ .van-nav-bar__content {
 		height: 50/100rem;

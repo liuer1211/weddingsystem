@@ -22,17 +22,20 @@
             <div>阅读：{{item.read}}</div>
           </div>
         </div>
-        <div class="chat-pint" @click="item.flag = !item.flag"></div>
+        <div class="chat-pint" @click="item.flag = !item.flag">
+          <img v-show="!item.flag" src="../../assets/images/icon/chat-close.png">
+          <img v-show="item.flag" src="../../assets/images/icon/chat-open.png">
+        </div>
       </div>
     </div>
     <div class="hei i"></div>
     <!-- 底部 -->
     <van-tabbar v-model="active" active-color="#F27306" inactive-color="#000">
       <van-tabbar-item icon="home-o" @click="$router.replace('/home')">首页</van-tabbar-item>
-      <van-tabbar-item icon="friends-o">领证</van-tabbar-item>
+      <van-tabbar-item icon="friends-o" @click="$router.replace('/marriage')">领证</van-tabbar-item>
       <van-tabbar-item icon="fire-o" @click="$router.replace('/chat')">最热</van-tabbar-item>
       <van-tabbar-item icon="birthday-cake-o" @click="$router.replace('/wedding')">婚庆</van-tabbar-item>
-      <van-tabbar-item icon="contact">我的</van-tabbar-item>
+      <van-tabbar-item icon="contact" @click="$router.push('/user')">我的</van-tabbar-item>
     </van-tabbar>
   </div>
 </template>
@@ -89,6 +92,7 @@ export default{
 		position: fixed;
 		width: 100%;
 		background-color: #ffd6a0;
+    z-index: 111;
 	}
 	/deep/ .van-nav-bar__content {
 		height: 50/100rem;
@@ -98,6 +102,7 @@ export default{
 	}
   // 底部
   /deep/ .van-tabbar{
+    z-index: 111;
     background-color: #ffd6a0;
     border-top-left-radius: 20/100rem;
     border-top-right-radius: 20/100rem;
@@ -106,7 +111,7 @@ export default{
     background-color: initial;
   }
   .hei{
-    height: 54/100rem;
+    height: 50/100rem;
     &.i{
       height: 50/100rem;
     }
@@ -193,8 +198,14 @@ export default{
         z-index: 1;
         width: 20px;
         height: 20px;
-        background: #F27306;
+        // background: #F27306;
         cursor: pointer;
+        img{
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          transition: .3s;
+        }
       }
     }
   }
