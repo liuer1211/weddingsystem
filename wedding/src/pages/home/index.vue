@@ -120,6 +120,9 @@ export default {
         case 2:
           this.$router.push({path:'/wedding'})
           break;
+        case 2:
+          window.href = "http://180.76.106.221/#/home"
+          break;
         default:
           break;
       }
