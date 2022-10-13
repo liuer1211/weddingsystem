@@ -9,6 +9,12 @@ import './utils/vants' // 按需加载vant
 
 Vue.config.productionTip = false
 
+//引入自定义插件
+import myPlugins from '@/plugins/focus';
+Vue.use(myPlugins,{
+    name:'focus'
+});
+
 new Vue({
   router,
   render: h => h(App),

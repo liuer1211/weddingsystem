@@ -35,6 +35,11 @@ const routes = [
     component: () => import('../pages/user')
   },
   {
+    name: 'search',
+    path: '/search',
+    component: () => import('../pages/search')
+  },
+  {
     path: '/',
     redirect: '/home'
   }

@@ -5,6 +5,7 @@
       v-model="searchVal" 
       placeholder="结婚幸福吧"
       background="#fedeb5"
+      @focus="$router.push('/search')"
     />
     <div class="hei"></div>
     <!-- 轮播图 -->

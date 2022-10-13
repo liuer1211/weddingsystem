@@ -135,6 +135,7 @@ export default{
         right: 30/100rem;
         z-index: 2;
         cursor: pointer;
+        opacity: .8;
         img{
           width: 24/100rem;
           height: 26/100rem;
