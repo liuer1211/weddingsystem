@@ -9,6 +9,10 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.18.2"
+    "art-template": "^4.13.2",
+    "errorhandler": "^1.5.1",
+    "express": "^4.18.2",
+    "express-art-template": "^1.0.1",
+    "ionicons": "^2.0.1"
   }
 }
