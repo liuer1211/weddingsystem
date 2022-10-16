@@ -16,8 +16,8 @@
   初始express
   监听端口
   跳页面
-
-  npm i errorhandler
+  错误日志
+    npm i errorhandler
 
 # 路由
   加入路由
@@ -38,6 +38,13 @@
     定位 左右布局 1200px 居中
   中间 
     1200px 居中
+    轮播图
+    flex布局
+    渐变
+    缩放
   底部
     1200px 居中
 
+# 动画
+  缩放
+    
