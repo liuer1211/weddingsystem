@@ -46,5 +46,10 @@
     1200px 居中
 
 # 动画
-  缩放
+  过渡
+    transition: .3s; 过渡几秒完成
+    transform: scale(1); 缩放 
+    transform-origin: right top; 基点变换
+
+  animation
     
