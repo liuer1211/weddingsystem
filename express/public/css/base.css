@@ -65,3 +65,99 @@ h1,h2,h3,h4,h5,h6 {
     font-size:100%;
     font-weight:500;
 }
+
+body{
+    background-color: #f5f5f5;
+}
+
+/* 公共样式布局 */
+/* 头部 */
+.head{
+    background-color: #7675fe;
+    color: #fff;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 80px;
+    z-index: 9;
+}
+.head >div{
+    width: 1200px;
+    min-width: 1200px;
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.head >div img{
+    width: 200px;
+    height: 50px;
+}
+.head >div .right{
+    display: flex;
+    align-items: center;
+    font-size: 20px;
+}
+.head >div .right >div{
+    padding: 20px 20px 8px;
+    box-sizing: border-box;
+    color: #e4e4e4;
+    position: relative;
+    cursor: pointer;
+    transition: .3s;
+}
+.head >div .right >div:hover{
+    color: #fff;
+}
+.head >div .right >div.active{
+    color: #fff;
+}
+.head >div .right >div.active::after{
+    content: '';
+    height: 3px;
+    width: 50px;
+    background-color: #fff;
+    position: absolute;
+    bottom: 0;
+    left: 16px;
+}
+
+
+/* 底部 */
+.foot{
+    background-color: #000;
+    color: #fff;
+    /* position: fixed;
+    bottom: 0; */
+    width: 100%;
+    height: 120px;
+}
+.foot >div{
+    width: 1200px;
+    min-width: 1200px;
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    cursor: pointer;
+    padding: 10px 0;
+    box-sizing: border-box;
+}
+.foot >div >div >span{
+    font-size: 14px;
+    color: #d2d2d2;
+    padding: 0 12px;
+    box-sizing: border-box;
+}
+
+/* 中间 */
+.container{
+    width: 1200px;
+    min-width: 1200px;
+    margin: 0 auto;
+    padding-top: 80px;
+    box-sizing: border-box;
+}

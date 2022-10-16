@@ -1,0 +1,117 @@
+.home-main{
+}
+
+.home-main .home-swiper{
+  width: 100%;
+  height: 400px;
+  margin-top: 20px;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.home-swiper .home-swiper-slide{
+  width: 100%;
+  height: 400px;
+  text-align: center;
+}
+.home-swiper .home-swiper-slide img{
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+.home-card{
+  margin-top: 20px;
+  background-color: #fff;
+  display: flex;
+  border-radius: 4px;
+  cursor: pointer;
+  padding: 12px 0;
+  box-sizing: border-box;
+}
+
+.home-card >div{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  height: 160px;
+  width: 20%;
+}
+
+.home-card >div img{
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+}
+
+
+.home-list{
+  margin-top: 20px;
+  cursor: pointer;
+}
+
+.home-list .home-li-model{
+  padding-bottom: 20px;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+}
+.home-list .home-li-model >div{
+  width: 50%;
+  box-sizing: border-box;
+  /* border-radius: 4px; */
+  height: 300px;
+}
+.li1{
+  background-image: linear-gradient(to right,#f2f605,#fff);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+}
+.li1.r{
+  background-image: linear-gradient(to right,#fff,#f2f605);
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+}
+.li1 img{
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+}
+.text{
+  background-color: #fff;
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+}
+.text.l{
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+.text h2{
+  font-size: 24px;
+  padding: 20px;
+  box-sizing: border-box;
+  position: relative;
+}
+.text p{
+  padding: 12px 20px;
+  box-sizing: border-box;
+  font-size: 18px;
+}
+.text h2::after{
+  content: '';
+  height: 1px;
+  background-color: #dcdcdc;
+  width: 90%;
+  position: absolute;
+  bottom: 0;
+  left: 20px;
+}

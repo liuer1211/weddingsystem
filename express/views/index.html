@@ -1,11 +1,116 @@
 {{extend './layout/layout.html'}}
 
-{{block 'link'}}
+{{block 'head'}}
 <link rel="stylesheet" type="text/css" href="/public/css/home/index.css">
+<!-- <link rel="stylesheet" href="/public/css/swiper.min.css">
+<script src="/public/js/swiper.min.js"></script> -->
 {{/block}}
 
 {{block 'body'}}
-  <div>
-    ssssssssssss
+  <div class="home-main">
+    <!-- 轮播图 -->
+    <div class="home-swiper">
+      <div class="swiper-container">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <div class="home-swiper-slide">
+              <img src="/public/imgs/s1.png">
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="home-swiper-slide">
+              <img src="/public/imgs/s2.png">
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="home-swiper-slide">
+              <img src="/public/imgs/s3.png">
+            </div>
+          </div>
+        </div>
+        <!-- 如果需要分页器 -->
+        <div class="swiper-pagination"></div>
+        <!-- 如果需要导航按钮 -->
+        <!-- <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div> -->
+      </div>
+    </div>
+    <!-- 卡片 -->
+    <div class="home-card">
+      <div>
+        <img src="/public/imgs/c1.png" alt="">
+        <span>美容</span>
+      </div>
+      <div>
+        <img src="/public/imgs/c2.png" alt="">
+        <span>家具</span>
+      </div>
+      <div>
+        <img src="/public/imgs/c3.png" alt="">
+        <span>科学</span>
+      </div>
+      <div>
+        <img src="/public/imgs/c4.png" alt="">
+        <span>数据</span>
+      </div>
+      <div>
+        <img src="/public/imgs/c5.png" alt="">
+        <span>更多</span>
+      </div>
+    </div>
+    <!-- 列表 -->
+    <div class="home-list">
+      <div class="home-li-model">
+        <div class="li1">
+          <img src="/public/imgs/li1.png" alt="">
+        </div>
+        <div class="text">
+          <h2>卓越的科技</h2>
+          <p>我们将拿出尖端科技，铸就梦想！</p>
+        </div>
+      </div>
+      <div class="home-li-model">
+        <div class="text l">
+          <h2>一流的服务</h2>
+          <p>我们为您提供优质的服务，纵享欢乐！</p>
+        </div>
+        <div class="li1 r">
+          <img src="/public/imgs/li2.png" alt="">
+        </div>
+      </div>
+      <div class="home-li-model">
+        <div class="li1">
+          <img src="/public/imgs/li3.png" alt="">
+        </div>
+        <div class="text">
+          <h2>时尚的潮流</h2>
+          <p>我们紧追时尚的前沿，不断创新！</p>
+        </div>
+      </div>
+    </div>
   </div>
+
+  <script>
+    var mySwiper = new Swiper('.swiper-container', {
+      autoplay: true,// 自动切换，等同于以下设置
+      autoplay: {
+        delay: 2000,
+        stopOnLastSlide: false, // 如果设置为true，当切换到最后一个slide时停止自动切换。（loop模式下无效）。
+        disableOnInteraction: false, // 用户操作swiper之后，是否禁止autoplay。
+      },
+      speed: 800, // 切换速度
+      grabCursor : true, // 鼠标覆盖Swiper 时指针会变成手掌形状，
+      loop: true, // 循环模式选项
+      // 如果需要分页器
+      pagination: {
+        el: '.swiper-pagination',
+      },
+      // 如果需要前进后退按钮
+      // navigation: {
+      //   nextEl: '.swiper-button-next',
+      //   prevEl: '.swiper-button-prev',
+      // },
+    })      
+  </script>
+
 {{/block}}
