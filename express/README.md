@@ -24,18 +24,22 @@
   拆分页面 头 身 尾
   上中下布局
   模板引擎拼接
+  切换路由
 
 # 模板引擎
   npm i art-template express-art-template
 
 # 静态资源
   配置资源开放
-  jquery3
-  swiper4
+  jquery3   =>  直接引入
+  swiper4   =>  直接引入
+  ionicons  =>  npm i ionicons
 
 # 首页
   头部 
     定位 左右布局 1200px 居中
+    动态缩放
+    返回顶部
   中间 
     1200px 居中
     轮播图
@@ -52,4 +56,5 @@
     transform-origin: right top; 基点变换
 
   animation
+    
     

@@ -85,7 +85,7 @@ body{
 .head.scale{
     height: 40px;
 }
-.head >div{
+.head .top{
     width: 1200px;
     min-width: 1200px;
     height: 100%;
@@ -93,6 +93,33 @@ body{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    border-radius: 50%;
+}
+.head .to-top{
+    position: fixed;
+    z-index: 9;
+    right: 20px;
+    bottom: 150px;
+    padding: 10px;
+    box-sizing: border-box;
+    box-shadow: 1px 1px #eee;
+    background-color: #fff;
+    border-radius: 50%;
+    overflow: hidden;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    line-height: 20px;
+    opacity: 0;
+    transition: .5s;
+    cursor: pointer;
+}
+.head .to-top.active{
+    opacity: 1;
+}
+.head .to-top i{
+    color: #7675fe;
+    font-size: 20px;
 }
 .head >div img{
     width: 200px;
