@@ -64,8 +64,8 @@
 .home-list .home-li-model >div{
   width: 50%;
   box-sizing: border-box;
-  /* border-radius: 4px; */
   height: 300px;
+  position: relative;
 }
 .li1{
   background-image: linear-gradient(to right,#f2f605,#fff);

@@ -10,10 +10,10 @@ import './utils/vants' // 按需加载vant
 Vue.config.productionTip = false
 
 //引入自定义插件
-import myPlugins from '@/plugins/focus';
-Vue.use(myPlugins,{
-    name:'focus'
-});
+import * as directives from '@/plugins/focus';
+Object.keys(directives).forEach(key=>{
+  Vue.directive(key, directives[key])
+})
 
 new Vue({
   router,

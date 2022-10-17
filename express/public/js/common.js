@@ -12,13 +12,35 @@ $(window).scroll(function(){
   }
 })
 
-// 返回顶部
+// 不能直接写
 $(function(){
-  // 不能直接写
+
+  // 返回顶部
   $('#upIcon').on('click',function () {
     $('body,html').animate({scrollTop:0},500);
   });
+
+  // 头部菜单点击切换
+  // $('#head .right div').on('click',function () {
+  //   // 自己添加active，兄弟节点删除active
+  //   // $(this).addClass('active').siblings().removeClass('active');
+  //   console.log($(this))
+  //   console.log($(this).index())
+  // });
+
+  // 头部菜单切换 进入执行
+  function setTab(){
+    if(getPathname().indexOf('home') !== -1){
+      $('#head .right div').eq(0).addClass('active').siblings().removeClass('active');
+    }
+    if(getPathname().indexOf('news') !== -1){
+      $('#head .right div').eq(1).addClass('active').siblings().removeClass('active');
+    }
+  }
+  // 获取location.pathname
+  function getPathname(){
+    return location.pathname
+  }
+  setTab();
+  
 });
-
-
-// 头部菜单点击切换

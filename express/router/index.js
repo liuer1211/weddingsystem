@@ -6,4 +6,12 @@ router.get('/',(req,res)=>{
   res.render('index.html')
 })
 
+router.get('/home',(req,res)=>{
+  res.render('index.html')
+})
+
+router.get('/news',(req,res)=>{
+  res.render('news.html')
+})
+
 module.exports = router

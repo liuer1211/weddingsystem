@@ -70,6 +70,12 @@ body{
     background-color: #f5f5f5;
 }
 
+/* 移除a标签所有属性 */
+a,a:link,a:visited,a:hover,a:active{
+    text-decoration: none;
+    color:inherit;
+}
+
 /* 公共样式布局 */
 /* 头部 */
 .head{
