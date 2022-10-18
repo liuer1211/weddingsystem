@@ -21,24 +21,52 @@
     </div>
     <!-- tab -->
     <div class="news-tab-main">
-      <div class="news-tab">
-        <span>公司</span>
+      <div id="newsTab" class="news-tab">
+        <span class="active">公司</span>
         <span>番外</span>
       </div>
-      <div class="news-model">
-        <div>
+      <div id="newsTabInfo" class="news-model">
+        <div class="news-m-bot active">
           <div>
-            <img src="" alt="">
-            <div></div>
+            <img src="/public/imgs/s1.png">
+            <div>
+              <h2>全球领先技术</h2>
+            </div>
+          </div>
+          <div>
+            <img src="/public/imgs/s1.png">
+            <div>
+              <h2>全球领先技术</h2>
+            </div>
           </div>
         </div>
-        <div>
+        <div class="news-m-bot">
           <div>
-            <img src="" alt="">
-            <div></div>
+            <img src="/public/imgs/s2.png">
+            <div>
+              <h2>全球领先服务</h2>
+            </div>
+          </div>
+          <div>
+            <img src="/public/imgs/s2.png">
+            <div>
+              <h2>全球领先服务</h2>
+            </div>
           </div>
         </div>
       </div>
     </div>
   </div>
+
+  <script>
+    // 切换tab
+    $('#newsTab span').click(function(){
+      $(this).addClass('active').siblings().removeClass('active');
+      changeTab($(this).index());
+    })
+    function changeTab(index){
+      console.log(index)
+      $('#newsTabInfo >div').eq(index).addClass('active').siblings().removeClass('active');
+    }
+  </script>
 {{/block}}

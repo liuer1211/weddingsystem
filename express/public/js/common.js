@@ -1,14 +1,14 @@
 // 监听滚动条变化 头部缩放
 $(window).scroll(function(){
   let scrollHeight = document.documentElement.scrollTop||document.body.scrollTop;
-  let nodeId = document.getElementById('head')
-  let upIcon = document.getElementById('upIcon')
+  let nodeId = document.getElementById('head');
+  let upIcon = document.getElementById('upIcon');
   if(scrollHeight>80){
-    nodeId.setAttribute('class', 'head scale')
-    upIcon.setAttribute('class', 'to-top active')
+    nodeId.setAttribute('class', 'head scale');
+    upIcon.setAttribute('class', 'to-top active');
   } else {
-    nodeId.setAttribute('class', 'head')
-    upIcon.setAttribute('class', 'to-top')
+    nodeId.setAttribute('class', 'head');
+    upIcon.setAttribute('class', 'to-top');
   }
 })
 
@@ -19,14 +19,6 @@ $(function(){
   $('#upIcon').on('click',function () {
     $('body,html').animate({scrollTop:0},500);
   });
-
-  // 头部菜单点击切换
-  // $('#head .right div').on('click',function () {
-  //   // 自己添加active，兄弟节点删除active
-  //   // $(this).addClass('active').siblings().removeClass('active');
-  //   console.log($(this))
-  //   console.log($(this).index())
-  // });
 
   // 头部菜单切换 进入执行
   function setTab(){
@@ -39,8 +31,7 @@ $(function(){
   }
   // 获取location.pathname
   function getPathname(){
-    return location.pathname
+    return location.pathname;
   }
   setTab();
-  
 });
