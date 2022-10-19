@@ -19,7 +19,7 @@ export default defineConfig({
       less:{
         javascriptEnabled:true,
         modifyVars:{
-          '@primary-color': '#eee'
+          '@primary-color': '#7675fe'
         }
       }
     }
