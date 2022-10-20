@@ -221,15 +221,13 @@ export default {
 			})
 		},
 		setCentert() {
+			// 外层整个tab
 			let container = document.querySelector('.tab-model')
+			// 单个tab
 			let activeNode = document.querySelector('.model.active')
-			// console.log('---', activeNode.offsetLeft)
-			// console.log('---', document.body.clientWidth)
-			// console.log('---', activeNode.clientWidth)
 			// 元素距离滑块左边距离  -  居中时元素到窗口左边距离  =  滚动条滑动的距离
 			let scrollWidth = activeNode.offsetLeft - (document.body.clientWidth-activeNode.clientWidth)/2
 			container.scrollLeft = scrollWidth;
-			// console.log('---', scrollWidth)
 		},
 		// 点击签到
 		getSelect(index,i){
@@ -258,6 +256,10 @@ export default {
 					display: none;
 				}
 				>div{
+					// flex-grow	一个数字，规定项目将相对于其他灵活的项目进行扩展的量。
+					// flex-shrink	一个数字，规定项目将相对于其他灵活的项目进行收缩的量。
+					// flex-basis	项目的长度。合法值："auto"、"inherit" 或一个后跟 "%"、"px"、"em" 或任何其他长度单位的数字。
+					// 点睛之笔
 					flex: 0 0 30%;
 					cursor: pointer;
 					border-radius: 4/100rem;
