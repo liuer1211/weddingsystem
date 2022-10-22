@@ -1,16 +1,20 @@
-import { useState } from 'react'
-import './App.css'
-
 import 'antd/dist/antd.less'
+import { HashRouter, Switch, Route, Redirect} from 'react-router-dom'
 
-import {Button} from 'antd'
+import Home from './pages/home'
+import Login from './pages/login'
 
 function App() {
 
   return (
     <div className="App">
-      <Button>123</Button>
-     
+      <HashRouter>
+        <Switch>
+          <Route path='/home' component={Home}></Route>
+          <Route path='/login' component={Login}></Route>
+          <Redirect to='/home'/>
+        </Switch>
+      </HashRouter>
     </div>
   )
 }
