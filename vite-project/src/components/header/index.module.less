@@ -1,0 +1,27 @@
+.head{
+  background-color: #7675fe;
+  padding: 12px;
+  box-sizing: border-box;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 1;
+  :global{
+    img{
+      width: 80px;
+      height: 40px;
+      object-fit: cover;
+    }
+    .right{
+      >span{
+        padding: 0 12px;
+        box-sizing: border-box;
+        cursor: pointer;
+      }
+    }
+  }
+}

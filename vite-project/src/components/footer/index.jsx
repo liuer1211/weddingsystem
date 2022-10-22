@@ -4,8 +4,8 @@ export default class Footer extends React.Component{
 
   render() {
     return (
-      <div>
-        qqqqqqqq
+      <div style={{textAlign: 'center'}}>
+        Copyright © 2022 结婚吧
       </div>
     )
   }

@@ -1,24 +1,24 @@
 import React from 'react'
-
+import { Redirect, Route, Switch } from 'react-router';
+import Header from '../../components/header'
+import Layout from '../../components/layout/index.jsx';
 import {token} from '../../utils'
 
 export default class Home extends React.Component{
 
-
-
   render() {
-    const tokenId = token();
-    // console.log('tokenId=',tokenId);
-    // console.log('props=',this.props);
-
+    const tokenId = token('tokenId');
+    
     if(!tokenId){
-      this.props.history.push('/login');
-      return;
+      // this.props.history.push('/login');
+      // return;
+      return <Redirect to='/login'/>
     }
 
     return (
       <div>
-        qqqqqqqq
+        <Header></Header>
+        <Layout></Layout>
       </div>
     )
   }

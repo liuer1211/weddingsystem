@@ -1,14 +1,17 @@
 import React from 'react'
 import homeStyle from './index.module.less'
 import { Button, Form, Input } from 'antd';
+import { setToken } from '../../utils'
 
 export default class Login extends React.Component{
+
+  // 成功
   onFinish = (values) => {
-    console.log('Success:', values);
+    setToken('tokenId','ok')
+    setToken('username',values.username)
+    this.props.history.replace('/');
   };
-  onFinishFailed = (errorInfo) => {
-    console.log('Failed:', errorInfo);
-  };
+  
   render() {
     // 校验
     const validatePwd = (rule, value, callBack)=> {
@@ -32,7 +35,6 @@ export default class Login extends React.Component{
               span: 24,
             }}
             onFinish={this.onFinish}
-            onFinishFailed={this.onFinishFailed}
             autoComplete="off"
           >
             <Form.Item

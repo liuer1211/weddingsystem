@@ -4,15 +4,17 @@ import { HashRouter, Switch, Route, Redirect} from 'react-router-dom'
 import Home from './pages/home'
 import Login from './pages/login'
 
+import './assets/index.less'
+
 function App() {
 
   return (
     <div className="App">
       <HashRouter>
         <Switch>
-          <Route path='/home' component={Home}></Route>
           <Route path='/login' component={Login}></Route>
-          <Redirect to='/home'/>
+          <Route path='/' component={Home}></Route>
+          <Redirect to='/'/>
         </Switch>
       </HashRouter>
     </div>
