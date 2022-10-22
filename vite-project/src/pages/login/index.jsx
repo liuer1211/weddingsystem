@@ -10,7 +10,7 @@ export default class Login extends React.Component{
     console.log('Failed:', errorInfo);
   };
   render() {
-    // 校验,其他写法
+    // 校验
     const validatePwd = (rule, value, callBack)=> {
       if (value && value.length<4) {
         callBack('密码大于4位')
@@ -28,18 +28,14 @@ export default class Login extends React.Component{
           <h2>登录</h2>
           <Form
             name="basic"
-            labelCol={{
-              span: 8,
-            }}
             wrapperCol={{
-              span: 16,
+              span: 24,
             }}
             onFinish={this.onFinish}
             onFinishFailed={this.onFinishFailed}
             autoComplete="off"
           >
             <Form.Item
-              label="用户名"
               name="username"
               rules={[
                 { required: true, message: '请输入用户名!', },
@@ -48,24 +44,22 @@ export default class Login extends React.Component{
                 { pattern: /^[a-zA-Z0-9_]+$/, message: '必须数字英文下划线' },
               ]}
             >
-              <Input />
+              <Input placeholder="用户名"/>
             </Form.Item>
 
             <Form.Item
-              label="密码"
               name="password"
               rules={[
                 { required: true, message: '请输入密码!' },
                 { validator: validatePwd },
               ]}
             >
-              <Input.Password />
+              <Input.Password placeholder="密码"/>
             </Form.Item>
 
             <Form.Item
               wrapperCol={{
-                offset: 8,
-                span: 16,
+                span: 24,
               }}
             >
               <Button type="primary" htmlType="submit">

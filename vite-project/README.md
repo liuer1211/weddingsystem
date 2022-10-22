@@ -9,6 +9,7 @@
     npm install --save @ant-design/icons
   
   按需加载：
+
     import { defineConfig } from 'vite'
     import react from '@vitejs/plugin-react'
     import vitePluginImp from 'vite-plugin-imp'
@@ -38,9 +39,11 @@
     })
 
   打包 npm run build
+
     配置 vite.config.js   base: './'  解决空白页
 
   css冲突解决
+  
     1. 同级，加module
     2. :global 包裹内部名称
     3. 引入，第一个使用{}，内部使用“”
