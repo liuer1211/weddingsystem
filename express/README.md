@@ -7,6 +7,7 @@
   npm install
   启动
   node app.js
+  npm start
 
 # 服务端渲染
   npm init

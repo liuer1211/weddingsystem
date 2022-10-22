@@ -29,6 +29,6 @@ if(process.env.NODE_ENV === 'development'){
   app.use(errorHandler())
 }
 
-app.listen(3000,()=>{
-  console.log('3000端口')
+app.listen(5011,()=>{
+  console.log('---端口 5011---')
 })
