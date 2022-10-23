@@ -146,7 +146,10 @@ class Marriage extends React.Component {
         <div style={{padding: 12}}>
           <Button>新增</Button>&nbsp;&nbsp;&nbsp;
           <Button>修改</Button>&nbsp;&nbsp;&nbsp;
-          <Button>删除</Button>
+          <Button>删除</Button>&nbsp;&nbsp;&nbsp;
+          <Button>上传</Button>&nbsp;&nbsp;&nbsp;
+          <Button>导出</Button>&nbsp;&nbsp;&nbsp;
+          <Button>打印</Button>&nbsp;&nbsp;&nbsp;
         </div>
         {/* table */}
         <Table 

@@ -6,3 +6,9 @@
 
 # 访问
   [点我访问](https://liuer1211.github.io/weddingsystem/dist/)
+
+  http://180.76.106.221:5010/wedding
+  
+  http://180.76.106.221:5010/admin
+
+  http://180.76.106.221:5011

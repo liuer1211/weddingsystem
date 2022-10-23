@@ -196,7 +196,15 @@ a,a:link,a:visited,a:hover,a:active{
     box-sizing: border-box;
     position: relative;
 }
-.foot >div .qrcode img{
+.foot >div .qrcode img:nth-child(1){
+    width: 120px;
+    height: 120px;
+    position: absolute;
+    top: 20px;
+    right: 130px;
+    z-index: 1;
+}
+.foot >div .qrcode img:nth-child(2){
     width: 120px;
     height: 120px;
     position: absolute;
