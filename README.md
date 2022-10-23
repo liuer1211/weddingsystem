@@ -5,10 +5,8 @@
   vue2+vueRouter3+vant2+axios+swiper7
 
 # 访问
-  [点我访问](https://liuer1211.github.io/weddingsystem/dist/)
+  婚庆网站：[点我访问](http://180.76.106.221:5010/wedding)
 
-  http://180.76.106.221:5010/wedding
-  
-  http://180.76.106.221:5010/admin
+  婚庆后台系统：[点我访问](http://180.76.106.221:5010/admin)
 
-  http://180.76.106.221:5011
+  官网站点：[点我访问](http://180.76.106.221:5011)
