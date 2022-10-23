@@ -1,85 +1,68 @@
 import React from 'react'
-import { Button, Form, Input, Col, Row, Table, Pagination } from 'antd';
+import { Button, Form, Input, Col, Row, Table, Pagination, Select } from 'antd';
 
 class Marriage extends React.Component {
 
   state={
     columns: [
       {
-        title: 'Name',
+        title: '机构名',
         dataIndex: 'name',
       },
       {
-        title: 'Chinese Score',
-        dataIndex: 'chinese',
+        title: '地址',
+        dataIndex: 'address',
+      },
+      {
+        title: '图片',
+        dataIndex: 'img',
+      },
+      {
+        title: '价格',
+        dataIndex: 'price',
         sorter: {
-          compare: (a, b) => a.chinese - b.chinese,
+          compare: (a, b) => a.price - b.price,
         },
       },
       {
-        title: 'Math Score',
-        dataIndex: 'math',
+        title: '星级',
+        dataIndex: 'star',
         sorter: {
-          compare: (a, b) => a.math - b.math,
+          compare: (a, b) => a.star - b.star,
         },
       },
       {
-        title: 'English Score',
-        dataIndex: 'english',
-        sorter: {
-          compare: (a, b) => a.english - b.english,
-        },
+        title: '评价',
+        dataIndex: 'evaluate',
       },
     ],
     data: [
       {
         key: '1',
-        name: 'John Brown',
-        chinese: 98,
-        math: 60,
-        english: 70,
+        name: '上海婚姻登记所',
+        address: '上海',
+        img: '',
+        price: '6',
+        star: '4',
+        evaluate: '很好',
       },
       {
         key: '2',
-        name: 'Jim Green',
-        chinese: 98,
-        math: 66,
-        english: 89,
+        name: '上海婚姻登记所',
+        address: '上海',
+        img: '',
+        price: '6',
+        star: '4',
+        evaluate: '很好',
       },
       {
         key: '3',
-        name: 'Joe Black',
-        chinese: 98,
-        math: 90,
-        english: 70,
-      },
-      {
-        key: '4',
-        name: 'Jim Red',
-        chinese: 88,
-        math: 99,
-        english: 89,
-      },
-      {
-        key: '5',
-        name: 'Jim Red',
-        chinese: 88,
-        math: 99,
-        english: 89,
-      },
-      {
-        key: '6',
-        name: 'Jim Red',
-        chinese: 88,
-        math: 99,
-        english: 89,
-      },
-      {
-        key: '7',
-        name: 'Jim Red',
-        chinese: 88,
-        math: 99,
-        english: 89,
+        name: '上海婚姻登记所',
+        address: '上海',
+        img: '',
+        price: '6',
+        star: '4',
+        evaluate: '很好',
       },
     ]
   }
@@ -93,7 +76,17 @@ class Marriage extends React.Component {
   onFinish = (values) => {
     console.log('Success:', values);
   };
-  
+  // 选择
+  onGenderChange = (value) => {
+    switch (value) {
+      case '0.5':
+        Form.useForm().setFieldsValue({
+          note: '0.5',
+        });
+        return;
+    }
+  };
+
   render() {
     const {columns, data} = this.state;
     return (
@@ -114,29 +107,39 @@ class Marriage extends React.Component {
           <Row gutter={16}>
             <Col className="gutter-row" span={12}>
               <Form.Item
-                label="Username"
-                name="username"
+                label="机构名"
+                name="name"
               >
                 <Input />
               </Form.Item>
             </Col>
             <Col className="gutter-row" span={12}>
-              <Form.Item
-                label="Password"
-                name="password"
+              <Form.Item 
+                label="星级"
+                name="star"
               >
-                <Input />
+                <Select onChange={this.onGenderChange} allowClear>
+                  <Select.Option value="5">非常好</Select.Option>
+                  <Select.Option value="4">很好</Select.Option>
+                  <Select.Option value="3">一般</Select.Option>
+                  <Select.Option value="2">不好</Select.Option>
+                  <Select.Option value="1">较差</Select.Option>
+                </Select>
               </Form.Item>
             </Col>
-            <Col className="gutter-row" span={12}>
+            <Col className="gutter-row" span={24}>
               <Form.Item
                 wrapperCol={{
-                  offset: 8,
-                  span: 16,
+                  offset: 0,
+                  span: 24,
                 }}
+                style={{textAlign: 'center'}}
               >
                 <Button type="primary" htmlType="submit">
-                  Submit
+                  查询
+                </Button>
+                <Button type="重置" style={{marginLeft: 12}}>
+                  查询
                 </Button>
               </Form.Item>
             </Col>

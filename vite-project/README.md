@@ -38,6 +38,14 @@
       }
     })
 
+  国际化 中文
+
+    import { ConfigProvider } from 'antd';
+    import zhCN from 'antd/es/locale/zh_CN';
+    <ConfigProvider locale={zhCN}>
+      <App />
+    </ConfigProvider>
+
   打包 npm run build
 
     配置 vite.config.js   base: './'  解决空白页
@@ -59,10 +67,20 @@
       <div className="login-model"></div>
     </div>
 
-  # 其他配置
+# 其他配置
     npm i normalize.css
     npm i react-router-dom@5
     npm i prop-types
     npm i mockjs
     npm i echarts
     npm i axios
+
+# 表结构
+    领证
+    id 唯一
+    name 机构名
+    address 地址
+    img 封面图
+    price 价格
+    star 星级
+    evaluate 评价

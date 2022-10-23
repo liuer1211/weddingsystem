@@ -52,6 +52,8 @@ class Nav extends React.Component{
     }
   };
   render() {
+    // defaultSelectedKeys={['1']}
+    // defaultOpenKeys={['sub1']}
     return (
       <div>
         <Menu
@@ -59,8 +61,6 @@ class Nav extends React.Component{
           style={{
             width: 200,
           }}
-          defaultSelectedKeys={['1']}
-          defaultOpenKeys={['sub1']}
           mode="inline"
           items={items}
         />
